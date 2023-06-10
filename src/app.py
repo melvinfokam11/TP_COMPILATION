@@ -28,7 +28,7 @@ for i in range(nb_al):
 	print('Entrer le symbole',i+1)
 	s=input()
 	alphabet.append(s)
-print(alphabet)
+print("Voici l'alphabet ",alphabet)
 print("-------------------------------")
 print("Entrer le nombre d' etats")
 print("-------------------------------")
@@ -38,7 +38,7 @@ for i in range(nb_state):
 	print('Entrer l etat',i+1)
 	s=int(input())
 	states.append(s)
-print(states)
+print("Voici les etats ",states)
 print("-------------------------------")
 print("Entrer le nombre d'etats initiaux ")
 print("-------------------------------")
@@ -48,7 +48,7 @@ for i in range(nb_state_i):
 	print('Entrer l etat initial ',i+1)
 	s=int(input())
 	initials.append(s)
-print(initials)
+print('Voici les etats initiaux',initials)
 print("-------------------------------")
 print("Entrer le nombre d'etats finaux ")
 print("-------------------------------")
@@ -58,6 +58,7 @@ for i in range(nb_state_f):
 	print('Entrer l etat final ',i+1)
 	s=int(input())
 	finals.append(s)
+print('Voici les etats finaux',finals)
 print("-------------------------------")
 print('Enter le nombre de transition')
 print("-------------------------------")
@@ -70,11 +71,24 @@ for i in range(nb_t):
 	c=input("le symbole ")
 	s=(a,c,b)
 	transitions.append(s)
-print(transitions)
+print("La table de transition ",transitions)
 
 print("-------------------------------")
+print("Voici l'alphabet ",alphabet)
+print("Voici les etats ",states)
+print('Voici les etats initiaux ',initials)
+print('Voici les etats finaux ',finals)
+print("La table de transition ",transitions)
 print("-------------------------------")
 
+"""""
+alphabet = ['a','b']
+epsilons=['e']
+states  = [1,2,3,4]
+initials = [1]
+finals = [2]
+transitions = [ (1,'a',1),(1,'a',3), (1,'b',2),(2,'b',1),(2,'b',4),(4,'b',2),(4,'a',4),(3,'b',2),(3,'a',4)]
+"""""
 z={
 	'alphabet':alphabet,
 	'state':states,
@@ -82,7 +96,6 @@ z={
 	'finalstate':finals,
 	'transition':transitions
 }
-
 
 a = automaton(alphabet = alphabet,epsilons=epsilons, states  = states,initials = initials, finals =finals,
 transitions = transitions)
@@ -116,6 +129,7 @@ def App():
 		case 4:
 			# Exemple d'utilisation
 			texte_source = "Le chiffre 42 est un nombre reconnu, mais ABC123 n'est pas."
+			texte_source=input("Entrer le texte de départ ")
 			séparateur = " "
 			résultats = reconnaître_nombres(texte_source, séparateur)
 			# Afficher les résultats

@@ -799,7 +799,7 @@ def nature_auto(a):
     elif is_AFN_or_AFD(a)=='It is a AFN':
        print('Automate fini non déterministe')
 
-alphabet = ['a','b']
+"""alphabet = ['a','b']
 epsilons=['e']
 states  = [0,1,2,3,4,5]
 initials = [0,1]
@@ -819,7 +819,7 @@ a = automaton(alphabet = alphabet,epsilons=epsilons, states  = states,initials =
 transitions = transitions)
 b=automaton(alphabet = alphabet,epsilons=epsilons, states  = states,initials = initials, finals =finals,
 transitions = transitions)
-
+"""
 def App():
     print('Menu')
     print("1-Donner la nature de l'automate\n2-Determiniser\n3-Minimiser l'automate")
