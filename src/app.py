@@ -17,10 +17,24 @@ z={
 }
 
 print("Entrer le nombre de symbole de l'alphabet")
-nb_al=int(input)
+nb_al=int(input())
+alphabet=[]
 for i in range(nb_al):
-    print('Entrer le symbole',i)
-    s=input
+    print('Entrer le symbole',i+1)
+    s=input()
+    alphabet.append(s)
+
+print("Entrer le nombre d' etats")
+nb_state=int(input())
+states=[]
+for i in range(nb_al):
+    print('Entrer l etat',i+1)
+    s=int(input())
+    states.append(s)
+
+
+
+
 a = automaton(alphabet = alphabet,epsilons=epsilons, states  = states,initials = initials, finals =finals,
 transitions = transitions)
 b=automaton(alphabet = alphabet,epsilons=epsilons, states  = states,initials = initials, finals =finals,
