@@ -225,16 +225,14 @@ def reconnaître_commentaires(texte):
             état = 2
     
     return commentaires
-
+"""""
 # Test de l'outil avec un exemple de texte
-texte = """
-acd /*abc%*/babA*/of
+texte = acd /*abc%*/babA*/of
 
-"""
 
 commentaires = reconnaître_commentaires(texte)
 for commentaire in commentaires:
-    print(commentaire)
+    print(commentaire)"""
 def determiniser_automate(etats, alphabet, transitions, etat_initial, etats_finaux):
     etats_determinises = set()  # Ensemble des états déterminisés
     nouvelle_transitions = []  # Liste des nouvelles transitions déterminisées
