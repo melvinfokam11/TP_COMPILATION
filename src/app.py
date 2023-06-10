@@ -36,7 +36,7 @@ print("Entrer le nombre d'etats initiaux ")
 nb_state_i=int(input())
 initials=[]
 for i in range(nb_state_i):
-    print('Entrer l etat',i+1)
+    print('Entrer l etat initial ',i+1)
     s=int(input())
     initials.append(s)
 
@@ -46,7 +46,7 @@ print("Entrer le nombre d'etats finaux ")
 nb_state_f=int(input())
 finals=[]
 for i in range(nb_state_f):
-    print('Entrer l etat',i+1)
+    print('Entrer l etat final ',i+1)
     s=int(input())
     finals.append(s)
 
