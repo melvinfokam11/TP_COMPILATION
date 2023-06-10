@@ -27,12 +27,28 @@ for i in range(nb_al):
 print("Entrer le nombre d' etats")
 nb_state=int(input())
 states=[]
-for i in range(nb_al):
+for i in range(nb_state):
     print('Entrer l etat',i+1)
     s=int(input())
     states.append(s)
 
+print("Entrer le nombre d'etats initiaux ")
+nb_state_i=int(input())
+initials=[]
+for i in range(nb_state_i):
+    print('Entrer l etat',i+1)
+    s=int(input())
+    initials.append(s)
 
+
+
+print("Entrer le nombre d'etats finaux ")
+nb_state_f=int(input())
+finals=[]
+for i in range(nb_state_f):
+    print('Entrer l etat',i+1)
+    s=int(input())
+    finals.append(s)
 
 
 a = automaton(alphabet = alphabet,epsilons=epsilons, states  = states,initials = initials, finals =finals,
